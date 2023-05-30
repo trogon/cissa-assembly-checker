@@ -57,6 +57,10 @@ public class FileSelectorService
             {
                 yield return info;
             }
+            else if (info.Extension.Equals(".exe", StringComparison.OrdinalIgnoreCase))
+            {
+                yield return info;
+            }
             else
             {
                 System.Diagnostics.Trace.WriteLine($"File info skipped, because not an assembly: [{info}]");
